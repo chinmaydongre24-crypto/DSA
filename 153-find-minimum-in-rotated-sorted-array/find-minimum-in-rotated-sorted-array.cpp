@@ -7,13 +7,13 @@ public:
         while(start<end)
         {
             int mid=start+(end-start)/2;
-            if(nums[mid]>nums[end])
+            if(nums[mid]<=nums[end])
             {
-                start=mid+1;
+                end=mid;
             }
             else
             {
-                end=mid;
+                start=mid+1;
             }
         }
         return nums[start];
