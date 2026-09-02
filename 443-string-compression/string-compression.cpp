@@ -2,8 +2,8 @@ class Solution {
 public:
     int compress(vector<char>& chars)
     {
-        int ansindex=0;
         int i=0;
+        int ansindex=0;
         while(i<chars.size())
         {
             int j=i+1;
@@ -11,18 +11,18 @@ public:
             {
                 j++;
             }
-            chars[ansindex++]=chars[i];
             int count=j-i;
+            chars[ansindex++]=chars[i];
             if(count>1)
             {
                 string cnt=to_string(count);
-                for(char ch:cnt)
+                for( char ch:cnt)
                 {
                     chars[ansindex++]=ch;
                 }
             }
             i=j;
         }
-        return ansindex;
+        return ansindex; 
     }
 };
