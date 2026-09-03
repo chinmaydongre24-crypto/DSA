@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int>>& matrix)
     {
-        vector<int> ans;
+        vector<int> an;
         int row=matrix.size();
         int column=matrix[0].size();
         int count=0;
@@ -15,29 +15,29 @@ public:
         {
             for(int index = startingcolumn;index<=endingcolumn && count<total;index++)
             {
-                ans.push_back(matrix[startingrow][index]);
+                an.push_back(matrix[startingrow][index]);
                 count++;
             }
             startingrow++;
             for(int index=startingrow;index<=endingrow && count<total;index++)
             {
-                ans.push_back(matrix[index][endingcolumn]);
+                an.push_back(matrix[index][endingcolumn]);
                 count++;
             }
             endingcolumn--;
             for(int index=endingcolumn;index>=startingcolumn && count<total;index--)
             {
-                ans.push_back(matrix[endingrow][index]);
+                an.push_back(matrix[endingrow][index]);
                 count++;
             }
             endingrow--;
             for(int index=endingrow;count<total && index>=startingrow;index--)
             {
-                ans.push_back(matrix[index][startingcolumn]);
+                an.push_back(matrix[index][startingcolumn]);
                 count++;
             }
             startingcolumn++;
         }
-        return ans;
+        return an;
     }
 };
