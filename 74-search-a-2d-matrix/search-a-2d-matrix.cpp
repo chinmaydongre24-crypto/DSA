@@ -6,9 +6,10 @@ public:
         int col=matrix[0].size();
         int start=0;
         int end=row*col-1;
+        int mid=start+(end-start)/2;
         while(start<=end)
         {
-            int mid=start+(end-start)/2;
+            
             int element=matrix[mid/col][mid%col];
             if(element==target)
             {
@@ -22,6 +23,7 @@ public:
             {
                 end=mid-1;
             }
+             mid=start+(end-start)/2;
         }
         return 0;
     }
