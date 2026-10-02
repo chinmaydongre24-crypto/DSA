@@ -4,21 +4,19 @@ public:
     {
         vector <int> ans(nums.size(),0);
         int number;
-        number=0;
         for(int i=0;i<nums.size();i++)
         {
             number=nums[i];
             ans[number]++;
         }
-        int maxi=0,ind=0;
+        int ind=0;
         for(int i=0;i<nums.size();i++)
         {
-            if(ans[i]>maxi)
+            if(ans[i]>1)
             {
-                maxi=ans[i];
-                ind=i;
+                return i;
             }
         }
-        return ind;
+        return -1;
     }
 };
