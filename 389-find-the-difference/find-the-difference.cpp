@@ -18,8 +18,7 @@ public:
         {
             if(hash2[i]!=hash1[i])
             {
-                char ans=i+'a';
-                return ans;
+                return i+'a';
             }
         }
         return 0;
