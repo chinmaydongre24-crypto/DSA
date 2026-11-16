@@ -7,9 +7,9 @@ public:
         while(start<end)
         {
             int mid=start+(end-start)/2;
-            if((mid&1)==0)
+            if(mid&1)
             {
-                if(nums[mid]==nums[mid+1])
+                if(nums[mid]==nums[mid-1])
                 {
                     start=mid+1;
                 }
@@ -20,7 +20,7 @@ public:
             }
             else
             {
-                if(nums[mid]==nums[mid-1])
+                if(nums[mid]==nums[mid+1])
                 {
                     start=mid+1;
                 }
