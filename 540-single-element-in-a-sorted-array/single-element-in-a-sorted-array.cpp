@@ -7,7 +7,7 @@ public:
         while(start<end)
         {
             int mid=start+(end-start)/2;
-            if(mid%2==0)
+            if((mid&1)==0)
             {
                 if(nums[mid]==nums[mid+1])
                 {
