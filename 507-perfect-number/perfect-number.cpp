@@ -2,7 +2,6 @@ class Solution {
 public:
     bool checkPerfectNumber(int num)
     {
-        vector<int> arr;
         int sum=0;
         for(int i=1;i<=num/2;i++)
         {
