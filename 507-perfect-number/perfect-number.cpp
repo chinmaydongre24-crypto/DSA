@@ -8,12 +8,8 @@ public:
         {
             if(num%i==0)
             {
-                arr.push_back(i);
+                sum+=i;
             }
-        }
-        for(int i=0;i<arr.size();i++)
-        {
-            sum+=arr[i];
         }
         if(sum==num)
         {
